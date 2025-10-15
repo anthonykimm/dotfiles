@@ -1,0 +1,11 @@
+# Background configuration
+background=#1b222e
+foreground=#cdcdce
+background-opacity=0.85
+background-blur=true
+
+# Fonts
+font-family="MesloLGS NF"
+
+# Theme
+theme=nightfox
