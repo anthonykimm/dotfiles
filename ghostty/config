@@ -6,6 +6,20 @@ background-blur=true
 
 # Fonts
 font-family="MesloLGS NF"
+font-thicken=true
 
 # Theme
 theme=nightfox
+
+# Keybinds
+keybind=global:ctrl+backslash=toggle_quick_terminal 
+
+# Quick terminal config
+quick-terminal-position=center
+quick-terminal-size=75%,75%
+quick-terminal-screen=mouse
+
+# Cursor
+cursor-style=block
+cursor-style-blink=false
+cursor-color=#FFFFFF
