@@ -7,7 +7,7 @@
       "segments": [
         {
           "style": "plain",
-          "template": "<#0c7bbb>\u256d\u2500</><#2f2f2f>\ue0b2</>",
+          "template": "<#014f86>\u256d\u2500</><#2f2f2f>\ue0b2</>",
           "type": "text"
         },
         {
@@ -50,23 +50,23 @@
           "type": "root"
         },
         {
-          "background": "#191f48",
-          "foreground": "#43ccea",
+          "background": "#001233",
+          "foreground": "#caf0f8",
           "properties": {
             "folder_icon": "\ue5fe ",
             "style": "full"
           },
           "style": "powerline",
           "powerline_symbol": "\ue0b0",
-          "template": "<#f2f200> \ue5ff </>{{ .Path }} ",
+          "template": " {{ .Path }} ",
           "type": "path"
         },
         {
           "background": "#020202",
-          "foreground": "#FF5C00",
+          "foreground": "#2EC4B6",
           "foreground_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}{{ end }}",
-            "{{ if gt .Ahead 0 }}#2EC4B6{{ end }}",
+            "{{ if gt .Ahead 0 }}#FF5C00{{ end }}",
             "{{ if gt .Behind 0 }}#8A4FFF{{ end }}"
           ],
           "properties": {
@@ -75,7 +75,7 @@
           },
           "style": "powerline",
           "powerline_symbol": "\ue0b0",
-          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}<#1f51ff>{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}</> ",
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}<#FF5C00>{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }}|{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}{{ if gt .StashCount 0 }} \ueb4b {{ .StashCount }}{{ end }}</> ",
           "type": "git"
         },
         {
@@ -145,7 +145,7 @@
       "newline": true,
       "segments": [
         {
-          "foreground": "#0c7bbb",
+          "foreground": "#014f86",
           "style": "plain",
           "template": "\u2570\u2500",
           "type": "text"
