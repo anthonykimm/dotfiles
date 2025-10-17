@@ -139,4 +139,20 @@ export PATH="/usr/local/opt/icu4c@76/sbin:$PATH"
 eval "$(/usr/local/bin/brew shellenv)"
 
 # Starship
-eval "$(starship init zsh)"
+# eval "$(starship init zsh)"
+
+# Oh my posh
+## Configs
+### Craver
+export CRAVER='https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/craver.omp.json'
+
+### Slimfat
+export SLIM_FAT='https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/slimfat.omp.json'
+
+### Sonicboom (dark)
+export SONICBOOM_DARK='https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/sonicboom_dark.omp.json'
+
+### Custom
+export OMP_CONFIG='~/.config/ohmyposh/config.omp.json'
+
+eval "$(oh-my-posh init zsh --config $OMP_CONFIG)"
