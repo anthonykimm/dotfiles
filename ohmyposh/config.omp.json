@@ -157,12 +157,6 @@
       "alignment": "right",
       "segments": [
         {
-          "foreground": "#7a7a7a",
-          "style": "plain",
-          "template": " \u276e ",
-          "type": "text"
-        },
-        {
           "foreground": "#FFCE5C",
           "properties": {
             "style": "roundrock",
@@ -181,7 +175,7 @@
             "always_enabled": true
           },
           "style": "plain",
-          "template": " \uea9f {{ if gt .Code 0 }}{{ .Code }}{{ end }} ",
+          "template": " \uf469 {{ if gt .Code 0 }}{{ .Code }}{{ end }} ",
           "type": "status"
         }
       ],
