@@ -156,3 +156,4 @@ export SONICBOOM_DARK='https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-po
 export OMP_CONFIG='~/.config/ohmyposh/config.omp.json'
 
 eval "$(oh-my-posh init zsh --config $OMP_CONFIG)"
+export PATH="$HOME/.local/bin:$PATH"
