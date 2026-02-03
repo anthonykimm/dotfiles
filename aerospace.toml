@@ -1,0 +1,125 @@
+# Behavior
+after-login-command = []
+after-startup-command = []
+
+# Normalization
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+# Mouse follows focus
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
+on-focus-changed = ['move-mouse window-lazy-center']
+
+# Layout (at root level, NOT in gaps)
+default-root-container-layout = 'tiles'
+default-root-container-orientation = 'auto'
+
+# Gaps and padding
+[gaps]
+inner.horizontal = 12
+inner.vertical =   12
+outer.left =       6
+outer.bottom =     6
+outer.top =        6
+outer.right =      6
+
+# Window rules (floating windows)
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'us.zoom.xos'
+run = 'layout floating'
+
+# Keybindings
+[mode.main.binding]
+
+# Open applications
+cmd-enter = 'exec-and-forget open -a "Ghostty"'
+cmd-shift-enter = 'exec-and-forget open -a "Zen"'
+alt-shift-d = 'exec-and-forget open -a "Discord"'
+
+# Focus windows (alt + hjkl)
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+# Move windows (shift + alt + hjkl)
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+# Move windows between monitors
+alt-shift-n = 'move-node-to-monitor left --wrap-around'
+alt-shift-m = 'move-node-to-monitor right --wrap-around'
+
+# Layout modifications
+alt-shift-r = 'layout tiles horizontal vertical'
+alt-shift-y = 'layout tiles vertical horizontal'
+alt-shift-x = 'layout tiles horizontal vertical'
+alt-shift-t = 'layout floating tiling'
+alt-shift-e = 'balance-sizes'
+
+# Fullscreen
+ctrl-alt-m = 'fullscreen'
+
+# Resize mode
+alt-shift-minus = 'resize smart -50'
+alt-shift-equal = 'resize smart +50'
+alt-minus = 'resize smart -50'
+alt-equal = 'resize smart +50'
+
+# Workspace navigation
+ctrl-cmd-h = 'workspace --wrap-around prev'
+ctrl-cmd-l = 'workspace --wrap-around next'
+
+# Move window to previous/next workspace (using bracket keys)
+alt-shift-leftSquareBracket = 'move-node-to-workspace --wrap-around prev'
+alt-shift-rightSquareBracket = 'move-node-to-workspace --wrap-around next'
+
+# Move window to specific workspace (shift + alt + number)
+alt-ctrl-1 = 'move-node-to-workspace 1'
+alt-ctrl-2 = 'move-node-to-workspace 2'
+alt-ctrl-3 = 'move-node-to-workspace 3'
+alt-ctrl-4 = 'move-node-to-workspace 4'
+alt-ctrl-5 = 'move-node-to-workspace 5'
+alt-ctrl-6 = 'move-node-to-workspace 6'
+alt-ctrl-7 = 'move-node-to-workspace 7'
+alt-ctrl-8 = 'move-node-to-workspace 8'
+
+# Focus workspace
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+alt-6 = 'workspace 6'
+alt-7 = 'workspace 7'
+alt-8 = 'workspace 8'
+
+[workspace-to-monitor-force-assignment]
+1 = "main"
+2 = "main"
+3 = "main"
+4 = "main"
+5 = "main"
+6 = ["secondary", "main"]
+7 = ["secondary", "main"]
+8 = ["secondary", "main"]
+9 = ["secondary", "main"]
+
+# Service mode for reloading config
+alt-shift-semicolon = 'mode service'
+
+[mode.service.binding]
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main']
+f = ['layout floating tiling', 'mode main']
+backspace = ['close-all-windows-but-current', 'mode main']

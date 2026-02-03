@@ -39,7 +39,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # zstyle ':omz:update' frequency 13
 
 # Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
+DISABLE_MAGIC_FUNCTIONS="true"
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -136,7 +136,7 @@ export PATH="/usr/local/opt/icu4c@76/bin:$PATH"
 export PATH="/usr/local/opt/icu4c@76/sbin:$PATH"
 
 # Homebrew
-eval "$(/usr/local/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Starship
 # eval "$(starship init zsh)"
@@ -153,7 +153,7 @@ export SLIM_FAT='https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/ref
 export SONICBOOM_DARK='https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/sonicboom_dark.omp.json'
 
 ### Custom
-export OMP_CONFIG='~/.config/ohmyposh/config.omp.json'
+export OMP_CONFIG="$HOME/.config/ohmyposh/config.omp.json"
 
 eval "$(oh-my-posh init zsh --config $OMP_CONFIG)"
 export PATH="$HOME/.local/bin:$PATH"
