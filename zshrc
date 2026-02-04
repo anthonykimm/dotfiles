@@ -135,8 +135,12 @@ if [ -f '/Users/anthony/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/a
 export PATH="/usr/local/opt/icu4c@76/bin:$PATH"
 export PATH="/usr/local/opt/icu4c@76/sbin:$PATH"
 
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Homebrew - detect architecture
+if [[ -f "/opt/homebrew/bin/brew" ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -f "/usr/local/bin/brew" ]]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
 
 # Starship
 # eval "$(starship init zsh)"
@@ -151,6 +155,8 @@ export SLIM_FAT='https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/ref
 
 ### Sonicboom (dark)
 export SONICBOOM_DARK='https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/sonicboom_dark.omp.json'
+
+export FUNCNEST=1000
 
 ### Custom
 export OMP_CONFIG="$HOME/.config/ohmyposh/config.omp.json"
