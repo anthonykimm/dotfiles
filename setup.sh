@@ -18,4 +18,4 @@ mkdir -p ~/.config/ohmyposh
 ln -sf ~/dotfiles/ohmyposh/config.omp.json ~/.config/ohmyposh/config.omp.json
 
 mkdir -p ~/.config/ghostty
-ln -sf ~/dotfiles/ghostty-config ~/.config/ghostty/config
+ln -sf ~/dotfiles/ghostty/config ~/.config/ghostty/config
