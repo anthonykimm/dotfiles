@@ -1,8 +1,7 @@
 # Behavior
 after-login-command = []
-after-startup-command = [
-  'exec-and-forget borders active_color=0xff88B1B6 inactive_color=0xff494d64 width=7.0'
-]
+after-startup-command = []
+# 'exec-and-forget borders active_color=0xff88B1B6 inactive_color=0xff494d64 width=7.0'
 
 # Normalization
 enable-normalization-flatten-containers = true
@@ -38,6 +37,14 @@ run = 'layout floating'
 if.app-id = 'us.zoom.xos'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+if.app-id = 'com.conductor.app'
+run = 'move-node-to-workspace C'
+
 # Keybindings
 [mode.main.binding]
 
@@ -45,6 +52,8 @@ run = 'layout floating'
 cmd-enter = 'exec-and-forget open -a "Ghostty"'
 cmd-shift-enter = 'exec-and-forget open -a "Zen"'
 alt-shift-d = 'exec-and-forget open -a "Discord"'
+alt-s = 'workspace S'
+alt-c = 'workspace C'
 
 # Focus windows (alt + hjkl)
 alt-h = 'focus left'
