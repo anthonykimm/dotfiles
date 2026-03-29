@@ -131,6 +131,8 @@ alt-8 = 'workspace 8'
 7 = ['built-in', 'secondary']
 8 = ['built-in', 'secondary']
 9 = ['built-in', 'secondary']
+S = ['built-in', 'secondary']
+C = ['built-in', 'secondary']
 
 # Service mode for reloading config
 alt-shift-semicolon = 'mode service'
