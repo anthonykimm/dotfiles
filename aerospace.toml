@@ -45,6 +45,10 @@ run = 'move-node-to-workspace S'
 if.app-id = 'com.conductor.app'
 run = 'move-node-to-workspace C'
 
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace X'
+
 # Keybindings
 [mode.main.binding]
 
@@ -54,6 +58,7 @@ cmd-shift-enter = 'exec-and-forget open -a "Zen"'
 alt-shift-d = 'exec-and-forget open -a "Discord"'
 alt-s = 'workspace S'
 alt-c = 'workspace C'
+alt-x = 'workspace X'
 
 # Focus windows (alt + hjkl)
 alt-h = 'focus left'
@@ -133,6 +138,7 @@ alt-8 = 'workspace 8'
 9 = ['built-in', 'secondary']
 S = ['built-in', 'secondary']
 C = ['built-in', 'secondary']
+X = ['built-in', 'secondary']
 
 # Service mode for reloading config
 alt-shift-semicolon = 'mode service'
