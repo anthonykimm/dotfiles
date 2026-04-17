@@ -126,13 +126,7 @@ eval "$(direnv hook zsh)"
 # FUCK plugin
 eval $(thefuck --alias)
 
-[ -f "/Users/anthony/.ghcup/env" ] && . "/Users/anthony/.ghcup/env" # ghcup-env
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/anthony/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/anthony/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/anthony/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/anthony/google-cloud-sdk/completion.zsh.inc'; fi
-export PATH="/usr/local/opt/icu4c@76/bin:$PATH"
+[ -f "/Users/anthony/.ghcup/env" ] && . "/Users/anthony/.ghcup/env" # ghcup-envexport PATH="/usr/local/opt/icu4c@76/bin:$PATH"
 export PATH="/usr/local/opt/icu4c@76/sbin:$PATH"
 
 # Homebrew - detect architecture
@@ -163,3 +157,12 @@ export OMP_CONFIG="$HOME/.config/ohmyposh/config.omp.json"
 
 eval "$(oh-my-posh init zsh --config $OMP_CONFIG)"
 export PATH="$HOME/.local/bin:$PATH"
+
+# Claude Code
+alias claude='claude --dangerously-skip-permissions'
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/anthony/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/anthony/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/anthony/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/anthony/google-cloud-sdk/completion.zsh.inc'; fi
