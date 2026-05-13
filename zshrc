@@ -162,7 +162,8 @@ export PATH="$HOME/.local/bin:$PATH"
 alias claude='claude --dangerously-skip-permissions'
 
 # Spotify
-alias skip='osascript -e '\''tell application "Spotify" to next track'\'''
+alias sk='osascript -e '\''tell application "Spotify" to next track'\'''
+alias bk='osascript -e '\''tell application "Spotify" to previous track'\'''
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/anthony/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/anthony/google-cloud-sdk/path.zsh.inc'; fi
