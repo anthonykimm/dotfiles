@@ -364,7 +364,7 @@ indicator_y_offset = 20
 # Smooth cursor (animates cursor movement between positions)
 # See https://github.com/y3owk1n/neru/blob/main/docs/CONFIGURATION.md#smooth_cursor
 [smooth_cursor]
-move_mouse_enabled = false                  # Enable smooth mouse movement
+move_mouse_enabled = true                   # Enable smooth mouse movement
 steps = 10                                  # Number of intermediate positions
 max_duration = 200                          # Maximum animation duration in ms
 duration_per_pixel = 0.1                    # Ms per pixel for adaptive duration
